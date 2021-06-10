@@ -11,4 +11,4 @@ and Javascript code.
 * How to manipulate the DOM and change HTML text using Javascript
 * How to manipulate the DOM and add/remove HTML elements using Javascript
 * How to add/edit inline CSS styles using Javascript
-* How to enalbe/disable inputs using Javascript
+* How to enable/disable inputs using Javascript
