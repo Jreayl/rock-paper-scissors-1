@@ -47,6 +47,7 @@ function playRound(playerSelection, computerSelection) {
                 document.getElementById("computer-score").textContent = computerScore;
     }
 
+    // Game over
     if (playerScore === 5 || computerScore === 5) {
         document.getElementById("rock").disabled = true;
         document.getElementById("paper").disabled = true;
