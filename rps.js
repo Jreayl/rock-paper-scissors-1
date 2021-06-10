@@ -3,6 +3,8 @@ let playerScore = 0;
 let computerScore = 0;
 let currRound = 1;
 
+// Adds an event listener to each input (button) and sends it's corresponding
+// id in the index.html file to the playRound function.
 const buttons = Array.from(document.querySelectorAll('.button'));
 buttons.forEach(button => {
     button.addEventListener('click', () => {
@@ -10,6 +12,7 @@ buttons.forEach(button => {
     });
 });
 
+// Picks a random number between [1-3] and returns that number as a weapon choice.
 function computerPlay() {
     rand = Math.floor(Math.random() * 3) + 1;
     if (rand === 1) { return "rock"; }
@@ -17,6 +20,8 @@ function computerPlay() {
     else { return "scissors"; }
 }
 
+// Plays a single round of rock paper scissors and updates the status message, scores,
+// and round number in the browser.
 function playRound(playerSelection, computerSelection) {
     playerSelectFormatStr = playerSelection.toLowerCase();
     computerSelectFormatStr = computerSelection.toLowerCase();
@@ -29,7 +34,7 @@ function playRound(playerSelection, computerSelection) {
         document.getElementById("status-msg").textContent = "Tie round!";
     }
 
-    // Player wins
+    // Player wins round
     else if ((playerSelectFormatStr === "rock" && computerSelectFormatStr === "scissors") ||
             (playerSelectFormatStr === "paper" && computerSelectFormatStr === "rock") ||
             (playerSelectFormatStr === "scissors" && computerSelectFormatStr === "paper")) {
@@ -38,7 +43,7 @@ function playRound(playerSelection, computerSelection) {
                 document.getElementById("player-score").textContent = playerScore;
     }
 
-    // Computer wins
+    // Computer wins round
     else if ((computerSelectFormatStr === "rock" && playerSelectFormatStr === "scissors") ||
             (computerSelectFormatStr === "paper" && playerSelectFormatStr === "rock") ||
             (computerSelectFormatStr === "scissors" && playerSelectFormatStr === "paper")) {
