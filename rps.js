@@ -1,4 +1,3 @@
-const ROUNDS = 5;
 let playerScore = 0;
 let computerScore = 0;
 let currRound = 1;
